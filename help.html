@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Sumaya's Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">☕ Sumaya's Coffee</a>
+            <ul class="nav-links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Help Section -->
+    <section class="section" style="margin-top: 80px;">
+        <h2>Help & FAQ</h2>
+        <div class="help-container">
+            <div class="faq-item">
+                <div class="faq-question">What types of coffee do you serve?</div>
+                <div class="faq-answer">
+                    We serve a wide variety of coffee including espresso, cappuccino, latte, americano, mocha, and cold brew. We also offer specialty drinks and seasonal beverages.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you have food options?</div>
+                <div class="faq-answer">
+                    Yes! We offer fresh pastries, sandwiches, salads, and desserts. All our food is prepared fresh daily using high-quality ingredients.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I make a reservation for a group?</div>
+                <div class="faq-answer">
+                    Absolutely! We welcome group reservations. Please contact us at least 24 hours in advance to arrange your group visit or special event.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer delivery services?</div>
+                <div class="faq-answer">
+                    Yes, we offer delivery through our partner delivery services. You can also place orders for pickup through our website or by phone.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are your COVID-19 safety measures?</div>
+                <div class="faq-answer">
+                    We follow all local health guidelines including regular sanitization, social distancing, and mask requirements for staff. We also offer contactless payment options.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you have WiFi available?</div>
+                <div class="faq-answer">
+                    Yes, we provide free WiFi for all our customers. The network name and password are displayed in our shop.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I bring my own cup for coffee?</div>
+                <div class="faq-answer">
+                    Absolutely! We encourage customers to bring their own reusable cups. We offer a small discount for customers who bring their own cups to help reduce waste.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sumaya's Coffee Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Toggle current answer
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+
+        // Initially hide all FAQ answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+    </script>
+</body>
+</html> 
